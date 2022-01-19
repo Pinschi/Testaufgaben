@@ -1,5 +1,4 @@
 def input_postal_code(prompt, *postalcodes):
-    number = 0
     while True:
         number_char = input(prompt)
         if number_char.upper() == "Q":
@@ -33,12 +32,12 @@ def input_bounded_integer(prompt, description, minimum, maximum):
                 return _check_bounded_integer(input_value, description, minimum, maximum)
 
         except ValueError as error:
-           print(error)
+            print(error)
 
 
 def _check_bounded_integer(value, description, minimum, maximum):
     try:
-        integer_value=int(value)
+        integer_value = int(value)
     except ValueError:
         raise ValueError(f" Your input {value} for {description} was not numerical!")
 
@@ -47,8 +46,9 @@ def _check_bounded_integer(value, description, minimum, maximum):
 
     return value
 
+
 def input_string(prompt):
-        input_value = input(prompt)
-        if input_value.upper() == "Q":
-                return
-        return input_value
+    input_value = input(prompt)
+    if input_value.upper() == "Q":
+        return
+    return input_value
