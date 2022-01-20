@@ -29,9 +29,11 @@ while True:
         case _:
             print("Not valid option! Please try it again!")
 
+
 with open('people.csv', 'w', newline='', encoding="UTF-8") as csvfile:
          writer = csv.writer(csvfile, delimiter=';', quotechar='"', quoting=csv.QUOTE_NONNUMERIC)
-         writer.writerow(["Name", "Day of Birth", "Month of Birth", "Year of Birth", "Postal Code"])
+         key_list = list (person.keys())
+         writer.writerow(person.keys())
          writer.writerow([person["name"],person["Day"], person["month"], person["year"],person["postal"]])
 
 print(person)
