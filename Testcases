@@ -1,0 +1,20 @@
+ID;Test case Description;Input Value;;Expected Output Value
+;;Amount  (Int); Member ( Bool );
+1;Calculate discount for  1  cartons for members;1;TRUE;0,2
+2;Calculate discount for  2  cartons for members;2;TRUE;0,2
+3;Calculate discount for  1  cartons for non members;1;FALSE;0
+4;Calculate discount for  2 cartons for non members;2;FALSE;0
+5;Calculate discount for  3 cartons for members;3;TRUE;0,4
+6;Calculate discount for  3 cartons for non members;3;FALSE;0,25
+7;Calculate discount for  4 cartons for members;4;TRUE;0,46
+8;Calculate discount for  5 cartons for members;5;TRUE;0,46
+9;Calculate discount for  4 cartons for non members;4;FALSE;0,33
+10;Calculate discount for  5 cartons for non members;5;FALSE;0,33
+11;Calculate discount for   6  cartons for members;6;TRUE;0,6
+12;Calculate discount for   10  cartons for members;10;TRUE;0,6
+13;Calculate discount for   6 cartons for non members;6;FALSE;0,5
+14;Calculate discount for   10 cartons for non members;10;FALSE;0,5
+15;Check result if input param for amount of cartons is > 10;11;FALSE;ValueError
+16;Check result if input param for amount of cartons is < 1;0;TRUE;ValueError
+17;Check result if input param is not an Integer;2,5;FALSE;ValueError
+18;Check result if input param is a string;test;TRUE;ValueError
